@@ -1,0 +1,53 @@
+:root{
+  --bg:#f4f7f2; --card:#fff; --ink:#1e2b1e; --muted:#64755f;
+  --accent:#2f7d46; --accent-dark:#226035; --line:#dde7d8; --chip:#e6f2e4;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:1000px;margin:0 auto;padding:0 18px}
+.site-header{background:#1e2b1e;color:#fff;position:sticky;top:0;z-index:5}
+.header-inner{display:flex;justify-content:space-between;align-items:center;padding:14px 18px}
+.brand{font-size:1.25rem;font-weight:700}
+.site-header nav a{color:#cfe6c9;text-decoration:none;margin-left:18px;font-size:.95rem}
+.site-header nav a:hover{color:#fff}
+.hero{padding:40px 0 6px;text-align:center}
+.hero h1{font-size:2.1rem;margin:0 0 12px}
+.lede{color:var(--muted);font-size:1.05rem;line-height:1.6;max-width:700px;margin:0 auto 14px}
+.trust-note{max-width:700px;margin:0 auto;color:#39543c;font-size:.95rem;line-height:1.6;background:var(--chip);border-radius:10px;padding:12px 16px}
+.badge-inline{background:#fff;border:1px solid var(--accent);color:var(--accent-dark);font-size:.78rem;font-weight:700;padding:2px 8px;border-radius:20px;white-space:nowrap}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px;margin:26px 0;box-shadow:0 2px 8px rgba(30,60,30,.05)}
+.card h2{margin-top:0}
+.count{color:var(--muted);font-size:.95rem;font-weight:400}
+.field-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.field{display:block;margin-bottom:14px}
+.field span{display:block;font-weight:600;font-size:.9rem;margin-bottom:6px}
+.field input[type=text],.field input[type=number],.field select,.field textarea{width:100%;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+.field.checkbox{display:flex;align-items:center;gap:8px}
+.field.checkbox span{margin:0;font-weight:500}
+.btn-primary{background:var(--accent);color:#fff;border:none;padding:12px 26px;border-radius:9px;font:inherit;font-weight:700;cursor:pointer}
+.btn-primary:hover{background:var(--accent-dark)}
+.form-msg{color:var(--accent-dark);font-weight:600;min-height:1.2em}
+.toolbar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+.toolbar input[type=search]{flex:1;min-width:180px;padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit}
+.toolbar select{padding:10px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff}
+.toolbar-check{font-size:.92rem;display:flex;gap:6px;align-items:center}
+.listing-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.listing-card{border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:7px;background:#fff}
+.listing-card h4{margin:0;font-size:1.05rem}
+.listing-top{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
+.price{font-weight:800;color:var(--accent-dark);font-size:1.15rem;white-space:nowrap}
+.meta{color:var(--muted);font-size:.85rem}
+.desc{font-size:.92rem;line-height:1.5;color:#37452f;margin:0}
+.badge{background:var(--chip);border:1px solid var(--accent);color:var(--accent-dark);font-size:.72rem;font-weight:700;padding:2px 7px;border-radius:20px;white-space:nowrap}
+.sample{background:#fdf3d8;border-color:#d9b84a;color:#7a5d12}
+.sample-tag{font-size:.72rem;font-weight:700;color:#7a5d12;text-transform:uppercase;letter-spacing:.5px}
+.card-actions{margin-top:auto;display:flex;gap:8px;padding-top:6px}
+.btn-small{border:1px solid var(--accent);background:#fff;color:var(--accent-dark);padding:7px 12px;border-radius:8px;font:inherit;font-size:.88rem;font-weight:600;cursor:pointer}
+.btn-small:hover{background:var(--chip)}
+.btn-ghost{border-color:var(--line);color:var(--muted)}
+.contact-box{background:var(--chip);border-radius:8px;padding:10px 12px;font-size:.9rem;line-height:1.5}
+.empty-note{color:var(--muted)}
+.steps{line-height:1.7;padding-left:20px}
+.honest{color:var(--muted);font-size:.92rem;line-height:1.6}
+.site-footer{padding:24px 0 40px;color:var(--muted);text-align:center;font-size:.9rem}
+@media (max-width:560px){ .hero h1{font-size:1.6rem} }
