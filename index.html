@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Campus Move-Out Marketplace — students selling to students</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">🎓 MoveOut Market</div>
+    <nav>
+      <a href="#browse">Browse</a>
+      <a href="#sell">Sell something</a>
+      <a href="#how">How it works</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Moving out? Don't throw it away.</h1>
+    <p class="lede">Every spring, dorms and apartments empty out and perfectly good desks, lamps, mini-fridges, and bikes end up in dumpsters. This marketplace lets students sell their stuff to other students instead — cheap for the buyer, money back for the seller, less in the landfill.</p>
+    <p class="trust-note">🔒 Members-only concept: the real version requires a verified school identity to post or buy, so you're dealing with actual students, not anonymous spam accounts. Listings below show a <span class="badge-inline">✓ Verified student</span> badge as part of that design.</p>
+  </section>
+
+  <section id="sell" class="card">
+    <h2>Sell something</h2>
+    <form id="listingForm">
+      <div class="field-grid">
+        <label class="field"><span>What are you selling?</span>
+          <input type="text" id="fTitle" required maxlength="70" placeholder="e.g. IKEA desk, good shape">
+        </label>
+        <label class="field"><span>Category</span>
+          <select id="fCategory">
+            <option>Furniture</option><option>Electronics</option><option>Kitchen</option>
+            <option>Books</option><option>Bikes &amp; Transport</option><option>Clothing</option><option>Other</option>
+          </select>
+        </label>
+        <label class="field"><span>Price ($)</span>
+          <input type="number" id="fPrice" required min="0" max="5000" step="1" placeholder="25">
+        </label>
+        <label class="field"><span>Condition</span>
+          <select id="fCondition">
+            <option>Like new</option><option>Good</option><option>Fair</option><option>Well-loved</option>
+          </select>
+        </label>
+        <label class="field"><span>Your name</span>
+          <input type="text" id="fSeller" required maxlength="40" placeholder="First name + last initial">
+        </label>
+        <label class="field"><span>Contact (school email or phone)</span>
+          <input type="text" id="fContact" required maxlength="60" placeholder="you@school.edu">
+        </label>
+        <label class="field checkbox">
+          <input type="checkbox" id="fVerified">
+          <span>I'm a verified student member (school identity confirmed)</span>
+        </label>
+      </div>
+      <label class="field"><span>Details</span>
+        <textarea id="fDesc" rows="3" maxlength="300" placeholder="Pickup area, why you're selling, anything the buyer should know"></textarea>
+      </label>
+      <button type="submit" class="btn-primary">Post listing</button>
+      <p class="form-msg" id="formMsg"></p>
+    </form>
+  </section>
+
+  <section id="browse" class="card">
+    <h2>Browse listings <span class="count" id="count"></span></h2>
+    <div class="toolbar">
+      <input type="search" id="searchBox" placeholder="Search listings…">
+      <select id="catFilter">
+        <option value="all">All categories</option>
+        <option>Furniture</option><option>Electronics</option><option>Kitchen</option>
+        <option>Books</option><option>Bikes &amp; Transport</option><option>Clothing</option><option>Other</option>
+      </select>
+      <select id="sortBy">
+        <option value="low">Price: low to high</option>
+        <option value="high">Price: high to low</option>
+        <option value="new">Newest first</option>
+      </select>
+      <label class="toolbar-check"><input type="checkbox" id="verifiedOnly"> Verified sellers only</label>
+    </div>
+    <div class="listing-grid" id="listingGrid"></div>
+    <p class="empty-note" id="emptyNote" hidden>Nothing matches that right now. Move-out season gets busy — check back, or loosen the filters.</p>
+  </section>
+
+  <section id="how" class="card">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><strong>Verify once.</strong> Members confirm they're a real student (school email / ID check in the real version). That one step kills most spam and scams.</li>
+      <li><strong>Post in a minute.</strong> Photo, price, pickup area. End-of-term listings are priced to move.</li>
+      <li><strong>Message and meet on campus.</strong> Buyers contact the seller directly and meet somewhere public on campus to swap.</li>
+    </ol>
+    <p class="honest">Honest note: this demo keeps listings in your browser only (localStorage) and the "verified" badge is a checkbox in the form — the real identity check, accounts, and messaging need a backend. See the README.</p>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p>MoveOut Market — a first working version of my campus marketplace idea. Plain HTML, CSS, and JavaScript.</p></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
